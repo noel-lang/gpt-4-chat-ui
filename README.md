@@ -1,18 +1,24 @@
-# Vue 3 + TypeScript + Vite
+# GPT-4 Chat UI mit Vue.js und TypeScript
+In diesem Projekt entwickeln wir eine eigene Benutzeroberfläche und bauen uns sozusagen unser eigenes "ChatGPT".
+Um zu starten, schaue dir gerne das Tutorial auf YouTube an. Klone das Repository und wechsle in den Branch
+`tutorial-start`, um zu beginnen.
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Installation
+1. Klone das Repository
 
-## Recommended IDE Setup
+```git clone https://github.com/noel-lang/gpt-4-chat-ui.git```
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+2. Lade den Ausgangspunkt
 
-## Type Support For `.vue` Imports in TS
+```git checkout tutorial-start```
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+3. Installiere die Abhängigkeiten
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+```npm install```
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+## Entwicklung
+1. Starte die lokale Entwicklungsumgebung
+
+```npm run dev```
+
+2. Öffne die URL `http://localhost:5173` in deinem Browser
