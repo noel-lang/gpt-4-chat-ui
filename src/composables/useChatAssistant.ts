@@ -6,33 +6,20 @@ const API_KEY = "<YOUR-API-KEY>";
 const utf8Decoder = new TextDecoder("utf-8");
 
 const decodeResponse = (response?: Uint8Array) => {
-    // If the input 'response' is not provided, return an empty string.
     if (!response) {
         return "";
     }
 
-    // Define a regular expression pattern that matches the 'delta' object containing 'content'.
-    // The pattern looks for a JSON object with a 'delta' key, followed by the value, which is another
-    // JSON object that includes a 'content' key with a string value.
     const pattern = /"delta":\s*({.*?"content":\s*".*?"})/g;
     const matches: string[] = [];
-
-
     const decodedText = utf8Decoder.decode(response);
-
-    console.log(decodedText);
 
     let match;
 
-    // Use a while loop to find all matches of the pattern in the decoded text.
-    // The 'exec' method returns the next match in the string, or null if no more matches are found.
     while ((match = pattern.exec(decodedText)) !== null) {
-        // For each match, parse the matched 'delta' object as JSON, and extract the 'content' value.
-        // Then, push the 'content' value into the 'matches' array.
         matches.push(JSON.parse(match[1]).content);
     }
 
-    // Join all the 'content' values in the 'matches' array into a single string and return it.
     return matches.join("");
 }
 
