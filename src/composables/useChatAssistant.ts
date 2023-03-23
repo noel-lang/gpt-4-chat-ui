@@ -1,7 +1,6 @@
-import {Ref, ref} from "vue";
-import {ChatCompletionRequestMessage, CreateChatCompletionRequest} from "openai";
-
-const API_KEY = "<YOUR-API-KEY>";
+import { Ref, ref } from "vue";
+import { ChatCompletionRequestMessage, CreateChatCompletionRequest } from "openai";
+import config from "../config";
 
 const utf8Decoder = new TextDecoder("utf-8");
 
@@ -69,7 +68,7 @@ export default function useChatAssistant() {
         const res = await fetch("https://api.openai.com/v1/chat/completions", {
             headers: {
                 "Content-Type": "application/json",
-                Authorization: `Bearer ${API_KEY}`,
+                Authorization: `Bearer ${config.API_KEY}`,
             },
             method: "POST",
             body: JSON.stringify({
